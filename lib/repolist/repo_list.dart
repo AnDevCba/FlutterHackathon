@@ -4,12 +4,13 @@ import 'model/repo.dart';
 
 
 class ReposList extends StatelessWidget {
-  final List<Repo> _contactModal;
+  final List<Repo> _reposModel;
 
-  ReposList(this._contactModal);
+  ReposList(this._reposModel);
 
   @override
   Widget build(BuildContext context) {
+
     return new ListView(
       padding: new EdgeInsets.symmetric(vertical: 8.0),
       children: _repoList(),
@@ -17,8 +18,8 @@ class ReposList extends StatelessWidget {
   }
 
   List<RepoListItem> _repoList() {
-    return _contactModal
-        .map((contact) => new RepoListItem(contact))
+    return _reposModel
+        .map((repo) => new RepoListItem(repo))
         .toList();
   }
 }

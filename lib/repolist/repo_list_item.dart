@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'model/repo.dart';
-import 'package:flutter_hackaton/main.dart';
 
 class RepoListItem extends StatelessWidget {
   final Repo _repoModel;
