@@ -11,7 +11,9 @@ class RepoListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return new ListTile(
         title: new Text(_repoModel.fullName),
-        subtitle: new Text(_repoModel.description),
+        subtitle: new Text(_repoModel.description,
+            overflow: TextOverflow.ellipsis,
+            maxLines: 1),
         onTap: () => onTapped(_repoModel));
   }
 
