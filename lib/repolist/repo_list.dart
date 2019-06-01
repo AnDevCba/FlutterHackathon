@@ -11,9 +11,12 @@ class ReposList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    final listView = ListTile.divideTiles(
+        context: context, tiles: _repoList(), color: Colors.black38)
+        .toList();
+
     return new ListView(
-      padding: new EdgeInsets.symmetric(vertical: 8.0),
-      children: _repoList(),
+      padding: new EdgeInsets.symmetric(vertical: 8.0),children: listView,
     );
   }
 

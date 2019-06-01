@@ -18,7 +18,7 @@ class RepoPage extends StatelessWidget {
       }else if(snap.hasError){
           return Text(snap.error);
         }else{
-        return Text("Cargando...");
+        return Center(child: Text("Cargando..."));
       }
     }));
   }
