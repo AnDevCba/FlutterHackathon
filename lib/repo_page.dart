@@ -6,7 +6,7 @@ import 'repolist/model/repo.dart';
 class RepoPage extends StatelessWidget {
 
   _searchRepos() {
-    return GithubApiClient().search();
+    return GithubApiClient().search("flutter");
   }
 
   @override

@@ -12,8 +12,14 @@ class RepoListItem extends StatelessWidget {
     return new ListTile(
         title: new Text(_repoModel.fullName),
         subtitle: new Text(_repoModel.description,
-            overflow: TextOverflow.ellipsis,
-            maxLines: 1),
+            overflow: TextOverflow.ellipsis, maxLines: 1),
+        trailing: new Row(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            new Text(_repoModel.stars.toString()),
+            Icon(IconData(59448, fontFamily: 'MaterialIcons'),color: Color.fromRGBO(255, 211, 0, 1.0))
+          ],
+        ),
         onTap: () => onTapped(_repoModel));
   }
 
