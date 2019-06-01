@@ -1,0 +1,16 @@
+import 'package:flutter/material.dart';
+import 'model/repo.dart';
+import 'package:flutter_hackaton/main.dart';
+
+class RepoListItem extends StatelessWidget {
+  final Repo _repoModel;
+
+  RepoListItem(this._repoModel);
+
+  @override
+  Widget build(BuildContext context) {
+    return new ListTile(
+        title: new Text(_repoModel.fullName),
+        subtitle: new Text(_repoModel.description));
+  }
+}

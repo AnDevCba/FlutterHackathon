@@ -1,4 +1,4 @@
-import 'package:flutter_hackaton/models/repo.dart';
+import 'package:flutter_hackaton/repolist/model/repo.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
