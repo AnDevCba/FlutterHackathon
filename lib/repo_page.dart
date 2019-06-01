@@ -6,13 +6,22 @@ import 'repolist/model/repo.dart';
 
 class RepoPage extends StatelessWidget {
 
-  _searchRepos() {
-    return GithubApiClient().search("flutter");
-  }
-
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(body: StreamBuilder<List<Repo>>(stream: AppState().events.stream, builder:
+    return new Scaffold(
+      appBar: AppBar(
+      title: TextField(
+        style: TextStyle(fontSize: 20.0, color: Colors.white),
+        decoration: InputDecoration(
+          border: InputBorder.none,
+          hintText: 'Please enter a search term',
+        ),
+        onSubmitted:(val)=>{
+          AppState().search(val)
+        },
+      ),
+      ),
+      body: StreamBuilder<List<Repo>>(stream: AppState().events.stream, builder:
     (context,snap){
       if(snap.hasData){
         return ReposList(snap.data);

@@ -14,6 +14,6 @@ class AppState {
   search(String criteria) async {
     var result = await GithubApiClient().search(criteria);
     events.add(result);
-  }
+    }
 
 }
