@@ -1,4 +1,4 @@
-# flutter_hackaton
+# FLibs
 
 Show and search Flutter related repositories on GitHub.
 
